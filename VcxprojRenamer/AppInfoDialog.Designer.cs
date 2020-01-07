@@ -53,7 +53,7 @@
             // 
             this.lbCanpany.AutoSize = true;
             this.lbCanpany.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbCanpany.Location = new System.Drawing.Point(155, 22);
+            this.lbCanpany.Location = new System.Drawing.Point(155, 17);
             this.lbCanpany.Name = "lbCanpany";
             this.lbCanpany.Size = new System.Drawing.Size(70, 19);
             this.lbCanpany.TabIndex = 1;
