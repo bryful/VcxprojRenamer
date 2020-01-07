@@ -21,6 +21,7 @@ namespace VcxprojRenamer
 {
     public partial class Form1 : Form
     {
+        private CTargetExt m_TargetExt = new CTargetExt();
         private string m_path = "";
         private List<string> m_TargetFiles = new List<string>();
         //-------------------------------------------------------------
@@ -58,6 +59,11 @@ namespace VcxprojRenamer
                 if (ok) this.Location = p;
                 string s = pref.GetString("Path",out ok);
                 if (ok) m_path = s;
+                string[] sa = pref.GetStringArray("Ext", out ok);
+                if(ok)
+                {
+                    m_TargetExt.Exts = sa;
+                }
             }
             this.Text = Path.GetFileNameWithoutExtension(Application.ExecutablePath);
         }
@@ -74,6 +80,7 @@ namespace VcxprojRenamer
             pref.SetSize("Size", this.Size);
             pref.SetPoint("Point", this.Location);
             pref.SetString("Path", m_path);
+            pref.SetStringArray("Ext", m_TargetExt.Exts);
             pref.Save();
 
         }
@@ -162,16 +169,7 @@ namespace VcxprojRenamer
         // **************************************************************************
         private bool IsTargetFile(string p)
         {
-            bool ret = false;
-
-            string e = Path.GetExtension(p);
-
-            ret = ((e == ".c") || (e == ".cpp") || (e == ".h") || (e == ".r")
-                || (e == ".vcxproj") || (e == ".filters")
-                || (e == ".plist") || (e == ".pbxproj") || (e == ".mode1v3") || (e == ".pbxuser")
-                || (e == ".xcworkspacedata") || (e == ".xcuserstate") || (e == ".xcsettings") || (e == "xcscheme"));
-
-            return ret;
+            return (m_TargetExt.IndexOfExt(Path.GetExtension(p)) >= 0);
         }
         // **************************************************************************
         private int FindFile(string p)
