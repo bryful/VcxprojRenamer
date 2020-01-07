@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPath = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.openToolStripMenuItem.Text = "Select Folder";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -118,18 +119,19 @@
             this.lbTarget.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTarget.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTarget.FormattingEnabled = true;
-            this.lbTarget.ItemHeight = 12;
-            this.lbTarget.Location = new System.Drawing.Point(24, 207);
+            this.lbTarget.ItemHeight = 16;
+            this.lbTarget.Location = new System.Drawing.Point(24, 243);
             this.lbTarget.Name = "lbTarget";
-            this.lbTarget.Size = new System.Drawing.Size(683, 340);
+            this.lbTarget.Size = new System.Drawing.Size(683, 292);
             this.lbTarget.TabIndex = 7;
             // 
             // lbOrg
             // 
             this.lbOrg.AutoSize = true;
             this.lbOrg.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbOrg.Location = new System.Drawing.Point(22, 34);
+            this.lbOrg.Location = new System.Drawing.Point(22, 68);
             this.lbOrg.Name = "lbOrg";
             this.lbOrg.Size = new System.Drawing.Size(112, 16);
             this.lbOrg.TabIndex = 0;
@@ -140,7 +142,7 @@
             this.tbOrg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbOrg.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbOrg.Location = new System.Drawing.Point(24, 101);
+            this.tbOrg.Location = new System.Drawing.Point(24, 135);
             this.tbOrg.Name = "tbOrg";
             this.tbOrg.Size = new System.Drawing.Size(500, 23);
             this.tbOrg.TabIndex = 3;
@@ -151,7 +153,7 @@
             this.tbNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNew.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbNew.Location = new System.Drawing.Point(24, 147);
+            this.tbNew.Location = new System.Drawing.Point(24, 181);
             this.tbNew.Name = "tbNew";
             this.tbNew.Size = new System.Drawing.Size(500, 23);
             this.tbNew.TabIndex = 5;
@@ -161,22 +163,22 @@
             // 
             this.lbNew.AutoSize = true;
             this.lbNew.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbNew.Location = new System.Drawing.Point(22, 128);
+            this.lbNew.Location = new System.Drawing.Point(22, 162);
             this.lbNew.Name = "lbNew";
-            this.lbNew.Size = new System.Drawing.Size(72, 16);
+            this.lbNew.Size = new System.Drawing.Size(88, 16);
             this.lbNew.TabIndex = 4;
-            this.lbNew.Text = "New Name";
+            this.lbNew.Text = "新しい名前";
             // 
             // btnExec
             // 
             this.btnExec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExec.Enabled = false;
             this.btnExec.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnExec.Location = new System.Drawing.Point(543, 99);
+            this.btnExec.Location = new System.Drawing.Point(543, 133);
             this.btnExec.Name = "btnExec";
             this.btnExec.Size = new System.Drawing.Size(164, 69);
             this.btnExec.TabIndex = 8;
-            this.btnExec.Text = "Rename Exec";
+            this.btnExec.Text = "リネーム実行";
             this.btnExec.UseVisualStyleBackColor = true;
             this.btnExec.Click += new System.EventHandler(this.BtnExec_Click);
             // 
@@ -184,32 +186,42 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(21, 185);
+            this.label3.Location = new System.Drawing.Point(21, 219);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Target Files";
+            this.label3.Text = "対象のファイル";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(22, 79);
+            this.label1.Location = new System.Drawing.Point(22, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Orginal Name";
+            this.label1.Text = "元の名前";
             // 
             // tbPath
             // 
             this.tbPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPath.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbPath.Location = new System.Drawing.Point(25, 53);
+            this.tbPath.Location = new System.Drawing.Point(25, 87);
             this.tbPath.Name = "tbPath";
             this.tbPath.ReadOnly = true;
             this.tbPath.Size = new System.Drawing.Size(682, 23);
             this.tbPath.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(25, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(472, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "ここへプロジェクトフォルダをドラッグ＆ドロップしてください";
             // 
             // Form1
             // 
@@ -217,6 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 585);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -263,6 +276,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPath;
+        private System.Windows.Forms.Label label2;
     }
 }
 

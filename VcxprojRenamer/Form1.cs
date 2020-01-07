@@ -133,12 +133,13 @@ namespace VcxprojRenamer
             if(m_TargetFiles.Count>0)
             {
                 m_TargetFiles.Sort();
+                string pp = Path.GetDirectoryName(m_TargetFiles[0]);
                 foreach (string s in m_TargetFiles)
                 {
-                    lbTarget.Items.Add(s);
+                    lbTarget.Items.Add(s.Replace(pp,"").Replace('\\', '/'));
                 }
-                tbPath.Text = Path.GetDirectoryName(m_TargetFiles[0]);
-                tbOrg.Text = tbNew.Text = Path.GetFileNameWithoutExtension(m_TargetFiles[0]);
+                tbPath.Text = Path.GetDirectoryName(m_TargetFiles[0]).Replace('\\','/');
+                tbOrg.Text = tbNew.Text = Path.GetFileNameWithoutExtension(tbPath.Text).Replace('\\', '/');
 
 
             }
